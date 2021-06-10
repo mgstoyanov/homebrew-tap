@@ -13,7 +13,7 @@ class Mustache < Formula
     ENV["PATH"] = "#{ENV["PATH"]}:#{buildpath}/bin"
     (buildpath/"src/github.com/cbroglie/mustache").install buildpath.children
     cd "src/github.com/cbroglie/mustache" do
-      system "go", "build", "-o", cmd/"mustache", "."
+      system "go", "build", "-o", bin/"mustache", "./cmd/mustache"
     end
   end
 
