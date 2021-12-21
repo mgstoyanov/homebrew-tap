@@ -1,4 +1,4 @@
-class Mustache < Formula
+class Go-mustache < Formula
   desc "This library is an implementation of the Mustache template language in Go."
   homepage "https://github.com/cbroglie/mustache"
   url "https://github.com/cbroglie/mustache/archive/refs/tags/v1.2.2.tar.gz"
