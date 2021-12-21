@@ -13,11 +13,11 @@ class Go-mustache < Formula
     ENV["PATH"] = "#{ENV["PATH"]}:#{buildpath}/bin"
     (buildpath/"src/github.com/cbroglie/mustache").install buildpath.children
     cd "src/github.com/cbroglie/mustache" do
-      system "go", "build", "-o", bin/"mustache", "./cmd/mustache"
+      system "go", "build", "-o", bin/"go-mustache", "./cmd/mustache"
     end
   end
 
   test do
-    assert_match /mustache data.yml template.mustache/, shell_output("#{bin}/mustche -h", 0)
+    assert_match /mustache data.yml template.mustache/, shell_output("#{bin}/go-mustache -h", 0)
   end
 end
